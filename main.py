@@ -105,7 +105,7 @@ async def on_message(message):
     if messagecont.startswith(prefix + 'memcount'): ##にんずうかぞえてくれるけいだんじｄddddフェjふぃえあ音階ふぁんせあの得あvmあぁ⒡目亜lmふぇいあ⒡時あ⒡なフェア⒡場hfbhbヴぁ；枝折を：pfかpr化：フェ
         count_mem = message.guild.member_count
         await messagech.send(f'{count_mem}人が参加してます')
-       if messagecont.startswith(prefix + 'gatimess'):
+    if messagecont.startswith(prefix + 'gatimess'):
         sunday = 6
         NOW_day_1 = datetime.datetime.now()
         while True:
