@@ -31,6 +31,7 @@ times = [1,60,3600,86400]
 bot_token = os.environ['DISCORD_BOT_TOKEN']
 
 embed1 = discord.Embed(title="予定表の提出", description="予定を教えてください。", color=0xff7b7b)
+embed2 = discord.Embed(title="お知らせ", url="https://forms.gle/TgTs2kRdixnDYe49A", description="来週の予定を提出してください", color=0x008080)
 
 @client.event
 async def on_ready():
@@ -80,7 +81,7 @@ async def on_message(message):
         Now_time2 = datetime.datetime.today()
         End_time = datetime.datetime.today()
         End_time = Now_time1 + datetime.timedelta(minutes=time_interval)
-        embed2 = discord.Embed(title="お知らせ", url="https://forms.gle/TgTs2kRdixnDYe49A", description="来週の予定を提出してください", color=0x008080)
+     
         time_flag = True
         i = 0
         
@@ -110,7 +111,7 @@ async def on_message(message):
         NOW_day_1 = datetime.datetime.now()
         while True:
             if NOW_day_1.weekday() == sunday:
-                await get_channel.send(embed=embed1)
+                await get_channel.send(embed=embed2)
             NOW_day_1 = datetime.datetime.now()
             await asyncio.sleep(times[3])
 
